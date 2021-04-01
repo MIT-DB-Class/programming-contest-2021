@@ -1,1 +1,1 @@
-# programming-contest-2021
+# 6.830 Programming Competition 2021

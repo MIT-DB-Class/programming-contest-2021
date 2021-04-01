@@ -30,3 +30,31 @@
 *.exe
 *.out
 *.app
+
+# Build directory
+build/
+cmake-build-*
+
+#==============================================================================#
+# File extensions to be ignored anywhere in the tree.
+#==============================================================================#
+# Temp files created by most text editors.
+*~
+# Merge files created by git.
+*.orig
+# Java bytecode
+*.class
+# Byte compiled python modules.
+*.pyc
+# vim swap files
+.*.sw?
+.sw?
+# vscode settings directory
+.vscode
+# IntelliJ
+.idea/
+#OS X specific files.
+.DS_store
+
+
+
