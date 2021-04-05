@@ -56,13 +56,13 @@ class Operator {
 class Scan : public Operator {
  protected:
   /// The relation
-  Relation &relation_;
+  const Relation &relation_;
   /// The name of the relation in the query
   unsigned relation_binding_;
 
  public:
   /// The constructor
-  Scan(Relation &r, unsigned relation_binding)
+  Scan(const Relation &r, unsigned relation_binding)
       : relation_(r), relation_binding_(relation_binding) {};
   /// Require a column and add it to results
   bool require(SelectInfo info) override;
@@ -87,12 +87,12 @@ class FilterScan : public Scan {
 
  public:
   /// The constructor
-  FilterScan(Relation &r, std::vector<FilterInfo> filters)
+  FilterScan(const Relation &r, std::vector<FilterInfo> filters)
       : Scan(r,
              filters[0].filter_column.binding),
         filters_(filters) {};
   /// The constructor
-  FilterScan(Relation &r, FilterInfo &filter_info)
+  FilterScan(const Relation &r, FilterInfo &filter_info)
       : FilterScan(r,
                    std::vector<
                        FilterInfo>{

@@ -41,7 +41,7 @@ void Joiner::addRelation(Relation &&relation) {
 }
 
 // Loads a relation from disk
-Relation &Joiner::getRelation(unsigned relation_id) {
+const Relation &Joiner::getRelation(unsigned relation_id) {
   if (relation_id >= relations_.size()) {
     std::cerr << "Relation with id: " << relation_id << " does not exist"
               << std::endl;
@@ -72,7 +72,7 @@ std::string Joiner::join(QueryInfo &query) {
   std::set<unsigned> used_relations;
 
   // We always start with the first join predicate and append the other joins
-  // to it (--> left_-deep join trees). You might want to choose a smarter
+  // to it (--> left-deep join trees). You might want to choose a smarter
   // join ordering ...
   const auto &firstJoin = query.predicates()[0];
   std::unique_ptr<Operator> left, right;

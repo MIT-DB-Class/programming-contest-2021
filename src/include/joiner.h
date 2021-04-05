@@ -18,7 +18,7 @@ class Joiner {
   void addRelation(const char *file_name);
   void addRelation(Relation &&relation);
   /// Get relation
-  Relation &getRelation(unsigned relation_id);
+  const Relation &getRelation(unsigned relation_id);
   /// Joins a given set of relations
   std::string join(QueryInfo &i);
 
