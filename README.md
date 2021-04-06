@@ -1,7 +1,5 @@
 # 6.830 Programming Competition 2021
 
-**TODO(Siva): Cite SIGMOD 18 - code and description**
-
 ## Task Details
 
 The task is to evaluate batches of join queries on a set of pre-defined
@@ -94,10 +92,8 @@ Execution time measurement starts immediately after the 60s waiting
 period. You are free to fully utilize the waiting period for any kind of
 pre-processing.
 
-**TODO(Siva): Check with Sam**
-
 All join graphs are connected. There are no cross products. Cyclic queries and
-self joins are possible. The maximum number of relations per query is 4.
+self joins are possible. We will provide more constraints soon.
 
 ## Starter code
 
@@ -225,5 +221,12 @@ starting point.
 
 ## Rules
 
-**TODO(Siva): Academic integrity stuff. Add details on how to use other
-open source code etc.**
+- All submissions must consist only of code written by the team or open source
+licensed software (i.e., using an OSI-approved license). For source code from
+books or public articles, clear reference and attribution must be made.
+- Please keep your solution private and not make it publicly available.
+
+## Acknowledgements
+
+This contest is adapted from SIGMOD 2018 programming contest. The starter code
+is a modified version of the quick start package provided with the contest.
