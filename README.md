@@ -142,7 +142,7 @@ above. You can use `query2SQL` to transform our query format to SQL.
 To test the small workload using our test harness run
 
 ```
-bash run_test_harness.sh
+bash run_test_harness.sh workloads/small
 ```
 
 To execute all tests run 
@@ -225,6 +225,13 @@ starting point.
 licensed software (i.e., using an OSI-approved license). For source code from
 books or public articles, clear reference and attribution must be made.
 - Please keep your solution private and not make it publicly available.
+
+## Updates
+When we release more details about the competition, we will add them under this
+section. 
+
+- A larger dataset is now available for testing. You can download it
+[here](http://dsg.csail.mit.edu/data/public.zip).
 
 ## Acknowledgements
 
