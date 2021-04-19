@@ -232,6 +232,18 @@ section.
 
 - A larger dataset is now available for testing. You can download it
 [here](http://dsg.csail.mit.edu/data/public.zip).
+- System specifications of the testing environment:
+
+| | |
+| ----------- | ----------- |
+| Processor       | Intel(R) Xeon(R) CPU E5-2630 v4 @ 2.20GHz       |
+| Configuration   | 12 cores / 24 hyperthreads        |
+| Main memory     | 96 GB DIMM RAM        |
+| OS              | Ubuntu 18.04        |
+| Software        | autoconf=2.69-11, automake=1:1.15.1-3ubuntu2, cmake=3.10.2-1ubuntu2.18.04.1, gcc=4:7.4.0-1ubuntu2.3, libjemalloc-dev=3.6.0-11, libboost-dev=1.65.1.0ubuntu1, clang-5.0=1:5.0.1-4, libtbb-dev=2017~U7-8        |
+
+- Dockerfile for the testing environment is available for download
+[here](https://github.com/MIT-DB-Class/programming-contest-2021/blob/main/Dockerfile).
 
 ## Acknowledgements
 
