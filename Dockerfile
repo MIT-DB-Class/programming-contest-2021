@@ -16,23 +16,23 @@ RUN apt-get update -qq \
                        gcc=4:7.4.0-1ubuntu2.3 \
                        gccgo=4:8.3.0-1ubuntu2.3 \
                        libjemalloc-dev=3.6.0-11 \
-                       libboost-dev=1.65.1.0ubuntu1 \
-                       clang-5.0=1:5.0.1-4 \
+					             libboost-dev=1.65.1.0ubuntu1 \
+					             clang-5.0=1:5.0.1-4 \
                        libtbb-dev=2017~U7-8 \
-                       python-pip=9.0.1-2.3~ubuntu1.18.04.4 \
-                       build-essential=12.4ubuntu1 \
+					             python-pip=9.0.1-2.3~ubuntu1.18.04.4 \
+					             build-essential=12.4ubuntu1 \
                        ruby-full=1:2.5.1 \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
-# Install Oracle Java 15.
+# Install Oracle Java 16.
 RUN \
   apt-get update && \
   apt-get install -y software-properties-common && \
-  echo oracle-java15-installer shared/accepted-oracle-license-v1-2 select true | debconf-set-selections && \
+  echo oracle-java16-installer shared/accepted-oracle-license-v1-2 select true | debconf-set-selections && \
   add-apt-repository -y ppa:linuxuprising/java && \
   apt-get update && \
-  apt-get install -y oracle-java15-installer && \
+  apt-get install -y oracle-java16-installer && \
   rm -rf /var/lib/apt/lists/* && \
   rm -rf /var/cache/oracle-jdk8-installer
 
