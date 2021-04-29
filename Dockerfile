@@ -16,11 +16,11 @@ RUN apt-get update -qq \
                        gcc=4:7.4.0-1ubuntu2.3 \
                        gccgo=4:8.3.0-1ubuntu2.3 \
                        libjemalloc-dev=3.6.0-11 \
-					             libboost-dev=1.65.1.0ubuntu1 \
-					             clang-5.0=1:5.0.1-4 \
+                       libboost-dev=1.65.1.0ubuntu1 \
+                       clang-5.0=1:5.0.1-4 \
                        libtbb-dev=2017~U7-8 \
-					             python-pip=9.0.1-2.3~ubuntu1.18.04.4 \
-					             build-essential=12.4ubuntu1 \
+                       python-pip=9.0.1-2.3~ubuntu1.18.04.4 \
+                       build-essential=12.4ubuntu1 \
                        ruby-full=1:2.5.1 \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
