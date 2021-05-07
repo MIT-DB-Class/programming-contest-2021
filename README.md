@@ -139,19 +139,30 @@ directory and `tester` in `build/test` directory. `driver` is the binary that
 interacts with our test harness `harness` according to the protocol described
 above. You can use `query2SQL` to transform our query format to SQL.
 
+`compile.sh` is the script we use for building your code in the testing environment. 
+It creates the binaries in `build/release` folder. It does not build unit tests
+as the testing environment does not have internet access. `run.sh` is the script
+the our test harness uses for running your executable. It expects the binaries
+in `build/release` folder. To test using our harness, first compile your code by
+running
+
+```
+bash compile.sh
+```
+
 To test the small workload using our test harness run
 
 ```
 bash run_test_harness.sh workloads/small
 ```
 
-To execute all tests run 
+To execute all unit tests run 
 
 ```
 ./tester
 ```
 
-To execute a specific test run 
+To execute a specific unit test run 
 
 ```
 ./tester --gtest_filter=<test_name>
