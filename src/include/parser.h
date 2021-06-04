@@ -27,7 +27,7 @@ struct SelectInfo {
   }
   /// Less Operator
   inline bool operator<(const SelectInfo &o) const {
-    return binding < o.binding || col_id < o.col_id;
+    return (binding < o.binding) || (binding == o.binding && col_id < o.col_id);
   }
 
   /// Dump text format
